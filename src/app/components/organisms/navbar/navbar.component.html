@@ -1,0 +1,12 @@
+<nav class="shadow-md bg-white px-6 py-4 flex justify-between items-center">
+  <h1 class="text-xl font-semibold text-blue-600">Coworking Admin</h1>
+
+  <div class="flex items-center gap-6">
+    <a routerLink="/dashboard" class="nav-link">Dashboard</a>
+    <a routerLink="/profile" class="nav-link">Perfil</a>
+
+    <button (click)="logout()" class="logout-btn">
+      Cerrar sesión
+    </button>
+  </div>
+</nav>

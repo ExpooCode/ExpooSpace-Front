@@ -1,0 +1,29 @@
+<div class="min-h-screen bg-[#0d0f14] text-white flex flex-col">
+
+  <!-- HEADER / NAVBAR -->
+  <header class="bg-[#0b0d12] border-b border-gray-800">
+    <div class="max-w-7xl mx-auto py-4 px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-400">ExpcoSpace</h1>
+
+      <nav class="space-x-4 text-sm">
+        <a routerLink="/" class="px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700">Inicio</a>
+        <a routerLink="/espacios" class="px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700">Espacios</a>
+        <a routerLink="/dashboard" class="px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700">Dashboard</a>
+        <a routerLink="/login" class="px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-500">Iniciar Sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1">
+    <div class="max-w-7xl mx-auto py-10 px-6">
+      <ng-content></ng-content>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0b0d12] text-gray-400 py-4 border-t border-gray-800 text-center text-sm">
+    © 2025 ExpcoSpace. Todos los derechos reservados.
+  </footer>
+
+</div>

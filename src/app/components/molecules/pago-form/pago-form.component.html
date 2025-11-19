@@ -1,0 +1,33 @@
+<div class="form-container">
+
+  <h3>{{ modoEdicion ? "Editar Pago" : "Registrar Pago" }}</h3>
+
+  <label>Reserva</label>
+  <select [(ngModel)]="pago.reservaId">
+    <option *ngFor="let r of reservas" [value]="r.id">
+      Reserva #{{ r.id }} - {{ r.usuario?.nombre }}
+    </option>
+  </select>
+
+  <label>Método</label>
+  <select [(ngModel)]="pago.metodo">
+    <option value="STRIPE">Stripe</option>
+    <option value="PAYU">PayU</option>
+    <option value="EFECTIVO">Efectivo</option>
+    <option value="TRANSFERENCIA">Transferencia</option>
+  </select>
+
+  <label>Monto</label>
+  <input type="number" [(ngModel)]="pago.monto" />
+
+  <label>Estado</label>
+  <select [(ngModel)]="pago.estado">
+    <option value="PENDIENTE">Pendiente</option>
+    <option value="APROBADO">Aprobado</option>
+    <option value="FALLIDO">Fallido</option>
+  </select>
+
+  <div class="buttons">
+    <app-button text="Guardar" (click)="enviar()"></app-button>
+  </div>
+</div>
