@@ -12,13 +12,13 @@ import { Recurso } from '../../../models/recurso';
 import { Reserva } from '../../../models/reserva';
 import { Pago } from '../../../models/pago';
 
-// ✅ RUTA CORRECTA DEL TEMPLATE
+
 import { DashboardPageTemplateComponent } from '../../templates/dashboard-page-template/dashboard-page-template.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  // ✅ AGREGA EL TEMPLATE AQUÍ
+
   imports: [
     CommonModule,
     RouterModule,
